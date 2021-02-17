@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Undergrad</title>
+
+<style type="text/css">
+	.content {
+		margin: auto;
+		width: 75%;
+	}
+	.course_desc {
+		background-color: #e6f7ff;
+	}
+	li {
+		background-color: #d1e0e0;
+	}
+	body {
+		background-color: #fff2cc;
+	}
+	table {
+		border: 2px solid black;
+	}
+	td {
+		background-color: #FDFEFF;
+		padding: 25px;
+	}
+</style>
+
+</head>
+
+<body>
+<div class="content">
+<h1>Undergraduate Studies</h1>
+
+<h3>Institutions and Degrees</h3>
+<table>
+	<tr>
+		<td>
+			<img src="images/school_logos/uccs.jpg" width="300">
+		</td>
+		<td>
+			<p><strong>B.S. Computer Science<br>GPA 3.91, May 2021</strong></p>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding: 5px;">
+			<img src="images/school_logos/ppcc.jpg" width="300">
+		</td>
+		<td>
+			<p><strong>A.S. Mathematics<br>GPA 3.72, Aug 2019</strong></p>	
+		</td>
+	</tr>
+</table>
+
+<h3>Coursework</h3>
+<button onclick="showAllDescriptions(true)">Show all course descriptions</button>
+<button onclick="showAllDescriptions(false)">Hide all course descriptions</button>
+<h4>Communications</h4>
+<ul>
+	<li id="COM_125" onclick="showHide('COM_125_Desc')">
+		<span class="course_title">COM 125 Interpersonal Communication</span>
+		<div class="course_desc" id="COM_125_Desc" style="display: none;">
+			<p>"Examines the communication involved in interpersonal relationships occurring in family, social, and career situations. Relevant concepts include self-concept, perception, listening, nonverbal communication, and conflict" (PPCC).</p>
+		</div>
+	</li>
+	<li id="COMM_3240" onclick="showHide('COMM_3240_Desc')">
+		<span class="course_title">COMM 3240 Business & Professional Communication</span>
+		<div class="course_desc" id="COMM_3240_Desc" style="display: none;">
+			<p>"Theory and practice in oral and written communication competency for business and the professions. Topics include presentational speaking, business and proposal writing, interpersonal communication in organizations, small group process and the role of the leader-manager, and communication trends in business organizations of the future" (UCCS).</p>
+		</div>
+	</li>
+	<li id="TCID_2090" onclick="showHide('TCID_2090_Desc')">
+		<span class="course_title">TCID 2090 Technical Writing and Communication</span>
+		<div class="course_desc" id="TCID_2090_Desc" style="display: none;">
+			<p>"Offers students an introduction to the spectrum of workplace and technical communication. Students will practice planning, drafting, revising, and testing documentation focused on user/audience needs. Students will create technical and multimedia projects such as: technical descriptions, instructions, proposals, various reports, and presentations" (UCCS).</p>
+		</div>
+	</li>
+	<li id="ENG_121" onclick="showHide('ENG_121_Desc')">
+		<span class="course_title">ENG 121 English Composition I</span>
+		<div class="course_desc" id="ENG_121_Desc" style="display: none;">
+			<p>"Emphasizes the planning, writing, and revising of compositions, including the development of critical and logical thinking skills. This course includes a wide variety of compositions that stress analytical, evaluative, and persuasive/argumentative writing." (PPCC).</p>
+		</div>
+	</li>
+	<li id="ENG_122" onclick="showHide('ENG_122_Desc')">
+		<span class="course_title">ENG 122 English Composition II</span>
+		<div class="course_desc" id="ENG_122_Desc" style="display: none;">
+			<p>"Expands and refines the objectives of English Composition I. Emphasizes critical/logical thinking and reading, problem definition, research strategies, and writing analytical, evaluative, and/or argumentative compositions." (PPCC).</p>
+		</div>
+	</li>
+	<li id="LIT_115" onclick="showHide('LIT_115_Desc')">
+		<span class="course_title">LIT 115 Intro to Literature I</span>
+		<div class="course_desc" id="LIT_115_Desc" style="display: none;">
+			<p>"Introduces fiction, poetry, and drama. This course emphasizes active and responsive reading." (PPCC).</p>
+		</div>
+	</li>
+</ul>
+
+
+
+<h4>Ethics & Hummanities</h4>
+<ul>
+	<li id="PHI_112" onclick="showHide('PHI_112_Desc')">
+		<span class="course_title">PHI 112 Ethics</span>
+		<div class="course_desc" id="PHI_112_Desc" style="display: none;">
+			<p>"Examines human life, experience, and thought  to discover and develop the principles and values for pursuing a more fulfilled existence. This course examines ethical theories designed to both justify moral judgments, as well as apply these ethical theories to a selection of personal and social issues in the world today" (PPCC).</p>
+		</div>
+	</li>
+	<li id="CS_3050" onclick="showHide('CS_3050_Desc')">
+		<span class="course_title">CS 3050 Social and Ethical Implications of Computing</span>
+		<div class="course_desc" id="CS_3050_Desc" style="display: none;">
+			<p>"topics in ethical, social, political, legal and economic aspects of the application of computers. Each student is expected to research one or more topics, actively participate in discussions, and give a presentation" (UCCS).</p>
+		</div>
+	</li>
+	<li id="SOC_101" onclick="showHide('SOC_101_Desc')">
+		<span class="course_title">SOC 101 Intro to Sociology</span>
+		<div class="course_desc" id="SOC_101_Desc" style="display: none;">
+			<p>"This course examines the basic concepts, theories, and principles of sociology, including topics of culture, race, class, gender, sexuality, social groups, and deviance through a local and global lens. Analyzes and interprets socio-historic as well as contemporary issues by using critical thinking skills and linking individual experiences to social structures" (PPCC).</p>
+		</div>
+	</li>
+	<li id="ECO_201" onclick="showHide('ECO_201_Desc')">
+		<span class="course_title">ECO 201 Principles of Macroeconomics</span>
+		<div class="course_desc" id="ECO_201_Desc" style="display: none;">
+			<p>"Focuses on the study of the national economy, emphasizing business cycles and long-run growth trends. Explores how macroeconomic performance is measured, including Gross Domestic Product and labor market indicators. Examines the saving-investment relationship and its relationship to Aggregate Supply and Aggregate Demand. Discusses money and banking, international trade, fiscal and monetary policy. Explores the macroeconomic role of the public sector." (PPCC).</p>
+		</div>
+	</li>
+	<li id="PHI_113" onclick="showHide('PHI_113_Desc')">
+		<span class="course_title">PHI 113 Logic</span>
+		<div class="course_desc" id="PHI_113_Desc" style="display: none;">
+			<p>"Studies effective thinking using language-oriented logic. Provides tools and develops skills for creative and critical thinking and the formal analysis of arguments. Emphasizes the development of decision-making and problem-solving" (PPCC).</p>
+		</div>
+	</li>
+</ul>
+
+<h4>Mathematics</h4>
+<ul>
+	<li id="MAT_121" onclick="showHide('MAT_121_Desc')">
+		<span class="course_title">MAT 121 College Algebra</span>
+		<div class="course_desc" id="MAT_121_Desc" style="display: none;">
+			<p>"a brief review of intermediate algebra, equations, and inequalities, functions and their graphs, exponential and logarithmic functions, linear and non-linear systems, selection of topics from among graphing of the conic sections, introduction to sequences and series, permutations and combinations, the binomial theorem, and theory of equations." (PPCC).</p>
+		</div>
+	</li>
+	<li id="MAT_166" onclick="showHide('MAT_166_Desc')">
+		<span class="course_title">MAT 166 Pre-Calculus</span>
+		<div class="course_desc" id="MAT_166_Desc" style="display: none;">
+			<p>"Reviews college algebra and college trigonometry intended for those planning to take calculus. Topics include algebraic manipulations, properties of algebraic and trigonometric functions and their graphs, trig identities and equations, conic sections, polar coordinates, and parametric equations." (PPCC).</p>
+		</div>
+	</li>
+	<li id="MAT_201" onclick="showHide('MAT_201_Desc')">
+		<span class="course_title">MAT 201 Calculus I</span>
+		<div class="course_desc" id="MAT_201_Desc" style="display: none;">
+			<p>"Introduces single variable calculus and analytic geometry. It includes limits, continuity, derivatives, and applications of derivatives as well as indefinite and definite integrals and some applications." (PPCC).</p>
+		</div>
+	</li>
+	<li id="MAT_202" onclick="showHide('MAT_202_Desc')">
+		<span class="course_title">MAT 202 Calculus II</span>
+		<div class="course_desc" id="MAT_202_Desc" style="display: none;">
+			<p>"Continues the study of single variable calculus which will include techniques of integration, polar coordinates, analytic geometry, improper integrals, and infinite series" (PPCC).</p>
+		</div>
+	</li>
+	<li id="MAT_204" onclick="showHide('MAT_204_Desc')">
+		<span class="course_title">MAT 202 Calculus III with Engineering Applications</span>
+		<div class="course_desc" id="MAT_204_Desc" style="display: none;">
+			<p>"Focuses the traditional subject matter of multi-variable Calculus with an additional emphasis on word problems and problem solving. Topics include vectors, vector-valued functions, partial derivatives, analytic geometry, multiple integrals, line integrals, Stokes’, Divergence Theorems and Green’s Theorems, and applications." (PPCC).</p>
+		</div>
+	</li>
+	<li id="MAT_215" onclick="showHide('MAT_215_Desc')">
+		<span class="course_title">MAT 215 Discrete Mathematics</span>
+		<div class="course_desc" id="MAT_215_Desc" style="display: none;">
+			<p>"Concentrates on formal logic, algorithms, induction proofs, equivalence relations and graphs. This course is designed for mathematics and computer science students" (PPCC).</p>
+		</div>
+	</li>
+	<li id="MATH_3130" onclick="showHide('MATH_3130_Desc')">
+		<span class="course_title">MATH 3130 Intro to Linear Algebra</span>
+		<div class="course_desc" id="MATH_3130_Desc" style="display: none;">
+			<p>"Systems of linear equations, matrices, vector spaces, linear independence, basis, dimension, determinants, linear transformations and matrices, eigenvalues and eigenvectors" (UCCS).</p>
+		</div>
+	</li>
+	<li id="ECE_3611" onclick="showHide('ECE_3611_Desc')">
+		<span class="course_title">ECE 3611 Engineering Probability and Statistics</span>
+		<div class="course_desc" id="ECE_3611_Desc" style="display: none;">
+			<p>"An introduction to probability and statistics with application to solving engineering problems. Includes the axioms of probability, random variables, density functions, distributions functions, expectations. Gaussian random variables, bivariate random variables, sums of independent random variables. Estimation of sample mean and variance. Monte Carlo simulation, binomial, hypergeometric, Poisson counting processes, confidence intervals, reliability, failure rates, the Weibull model, the log-normal model, estimation using regression. Introduction to random processes" (UCCS).</p>
+		</div>
+	</li>
+</ul>
+
+<h4>General Sciences</h4>
+<ul>
+	<li id="GEY_112" onclick="showHide('GEY_112_Desc')">
+		<span class="course_title">GEY 112 Historical Geology</span>
+		<div class="course_desc" id="GEY_112_Desc" style="display: none;">
+			<p>"Covers the development of Earth through the vast span of geologic time. Emphasis is on the investigation and interpretation of sedimentary rocks and features, the record of ancient environments, fossil life forms, and physical events in Earth’s history within the framework of plate tectonics" (PPCC).</p>
+		</div>
+	</li>
+	<li id="PHY_211" onclick="showHide('PHY_211_Desc')">
+		<span class="course_title">PHY 211 Physics Calc-Based I</span>
+		<div class="course_desc" id="PHY_211_Desc" style="display: none;">
+			<p>"Covers the physics of kinematics, dynamics, and conservation laws and requires application of classical physics to both mathematical and conceptual problems. Specific concepts covered include 1D and 2D kinematics, Newton’s Laws, rotational motion, energy and work, momentum and impulse, and simple harmonic motion. This course may also cover thermodynamics and fluid mechanics" (PPCC).</p>
+		</div>
+	</li>
+	<li id="PHY_212" onclick="showHide('PHY_212_Desc')">
+		<span class="course_title">PHY 212 Physics Calc-Based II</span>
+		<div class="course_desc" id="PHY_212_Desc" style="display: none;">
+			<p>"Covers the physics of electricity and magnetism using conceptual and mathematical reasoning, including calculus. Maxwell’s equations, waves, and time-varying circuits will be covered. Optional topics include wave and geometric optics and AC circuits" (PPCC).</p>
+		</div>
+	</li>
+</ul>
+
+<h4>Computer Sciences</h4>
+<h5>General</h5>
+<ul>
+	<li id="CSC_119" onclick="showHide('CSC_119_Desc')">
+		<span class="course_title">CSC 119 Introduction to Programming (Java)</span>
+		<div class="course_desc" id="CSC_119_Desc" style="display: none;">
+			<p>"Focuses on a general introduction to computer programming. This course emphasizes the design and implementation of structured and logically correct programs with good documentation. It is centered on basic programming concepts, including control structures, modularization, and data processing. A structured programming language is used to implement program designs. It emphasizes the writing of multiple programs following the software development process, from start to finish, including design, implementation, and testing" (PPCC).</p>
+		</div>
+	</li>
+	<li id="CSC_160" onclick="showHide('CSC_160_Desc')">
+		<span class="course_title">CSC 160 Computer Science I: (C++)</span>
+		<div class="course_desc" id="CSC_160_Desc" style="display: none;">
+			<p>"Introduces students to the discipline of computer science and programming. Algorithm development, data representation, logical expressions, sub-programs and input/output operations using a high-level programming language are covered. Intensive lab work outside of class time is required" (PPCC).</p>
+		</div>
+	</li>
+	<li id="CSC_161" onclick="showHide('CSC_161_Desc')">
+		<span class="course_title">CSC 161 Computer Science II: (C++)</span>
+		<div class="course_desc" id="CSC_161_Desc" style="display: none;">
+			<p>"Continues algorithm development and problem-solving techniques not covered in Computer Science I using a high-level programming language. Students are able to gain experience in the use of data structures and the design and implementation of larger software projects. Intensive computer laboratory experience is required for this course" (PPCC).</p>
+		</div>
+	</li>
+	<li id="CS_230" onclick="showHide('CS_230_Desc')">
+		<span class="course_title">CSC 230 C Programming: Platform</span>
+		<div class="course_desc" id="CS_230_Desc" style="display: none;">
+			<p>"Prepares students to be a better programmer using the C programming language. C is a mid-level language whose economy of expression and data manipulation features allows a programmer to deal with the computer at a low level. The goal is to learn skills that are usable in many languages and understand what is happening at the machine level. The student should already understand the control structures selection, iteration, and subroutines (functions/methods)" (PPCC).</p>
+		</div>
+	</li>
+	<li id="CS_2080" onclick="showHide('CS_2080_Desc')">
+		<span class="course_title">CS 2080 Programming with UNIX</span>
+		<div class="course_desc" id="CS_2080_Desc" style="display: none;">
+			<p>"An introduction to the UNIX operating system with an emphasis on the development of C and command shell programs" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_3160" onclick="showHide('CS_3160_Desc')">
+		<span class="course_title">CS 3160 Concepts of Programming Languages (Lisp, ML, C++)</span>
+		<div class="course_desc" id="CS_3160_Desc" style="display: none;">
+			<p>"Evolution of the central concepts of programming languages, describing syntax and semantics, data types, abstract data types, control structures, subprograms, concurrency and exception handling" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4700" onclick="showHide('CS_4700_Desc')">
+		<span class="course_title">CS 4700 Computer Automata & Formal Languages</span>
+		<div class="course_desc" id="CS_4700_Desc" style="display: none;">
+			<p>"Finite automata and regular expressions, context-free grammars, context-free languages, and pushdown automata, Turning machines, undecidability, the Chomsky hierarchy of formal languages, computational complexity and intractable problems" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4100" onclick="showHide('CS_4100_Desc')">
+		<span class="course_title">CS 4100 Compiler Design I</span>
+		<div class="course_desc" id="CS_4100_Desc" style="display: none;">
+			<p>"Underlying theory and design techniques for compilers. Lexical analysis, top-down and bottom-up parsing algorithms, runtime storage management, syntax directed translation schemes, intermediate code generation" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4720" onclick="showHide('CS_4720_Desc')">
+		<span class="course_title">CS 4720 Design & Analysis of Algorithms</span>
+		<div class="course_desc" id="CS_4720_Desc" style="display: none;">
+			<p>"Design methodologies; divide-and-conquer, exhaustive search, dynamic programming. Time and space complexity measures, analysis of algorithms. Survey of important algorithms for searching, sorting, graph manipulation. Tractability: class P and NP, NP complete problems" (UCCS).</p>
+		</div>
+	</li>
+</ul>
+
+<h5>Software Engineering</h5>
+<ul>
+	<li id="CS_3300" onclick="showHide('CS_3300_Desc')">
+		<span class="course_title">CS 3300 Software Engineering I (Ruby on Rails)</span>
+		<div class="course_desc" id="CS_3300_Desc" style="display: none;">
+			<p>"Software engineering methodologies. The software lifecycle. Emphasis on the design, development and implementation of a software system. A course project provides the student teams practical application of the software engineering techniques" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_3020" onclick="showHide('CS_3020_Desc')">
+		<span class="course_title">CS 3020 Object-Oriented Tech Usng C#/.Net</span>
+		<div class="course_desc" id="CS_3020_Desc" style="display: none;">
+			<p>"C# class construction principles, delegates, threads, event handling, GUI components, observer pattern, standard collections, generic parameters, enumerators, custom components, UML representation, abstract classes, interfaces, object persistence, remoting, and refactoring" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_3110" onclick="showHide('CS_3110_Desc')">
+		<span class="course_title">CS 3110 Programming the Mobile Web (html/js)</span>
+		<div class="course_desc" id="CS_3110_Desc" style="display: none;">
+			<p>"Provides an introduction to web systems and technologies with focus on the support for mobile platforms. Topics include HTML5, CSS, JavaScript" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_3080" onclick="showHide('CS_3080_Desc')">
+		<span class="course_title">CS 3080 Python Programming</span>
+		<div class="course_desc" id="CS_3080_Desc" style="display: none;">
+			<p>"Python basics, advanced topics including working with pdf, excel, JSON, CSV, decorators, lambda functions, generators, iterators, pattern matching, web scraping, threading, multiprocessing, networking with sockets, servers with Django, scientific computing using Numpy Matplotlib Class Project " (UCCS).</p>
+		</div>
+	</li>
+</ul>
+
+<h5>Architecture</h5>
+<ul>
+	<li id="" onclick="showHide('_Desc')">
+		<span class="course_title">CS 2160 Computer Organization and Assembly Language (MIPS)</span>
+		<div class="course_desc" id="_Desc" style="display: none;">
+			<p>"Provides an introduction to the concepts of computer architecture, functional logic, design and computer arithmetic. It presents material on the mechanics of information transfer and control within a computer system. Also included are: symbolic programming techniques, implementing high level control structures, addressing modes and their relation to arrays, subprograms, parameters, linkage to high level languages and the assembly process" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4200" onclick="showHide('CS_4200_Desc')">
+		<span class="course_title">CS 4200 Computer Architecture I (x86)</span>
+		<div class="course_desc" id="CS_4200_Desc" style="display: none;">
+			<p>"Course covers fundamentals of computer design, instruction set principles and examples, pipelining, advanced pipelining and instruction-level parallelism, memory-hierarchy design and survey of design issues in storage, interconnection network and multiprocessor systems" (UCCS).</p>
+		</div>
+	</li>
+</ul>
+
+<h5>Security</h5>
+<ul>
+	<li id="CS_4220" onclick="showHide('CS_4220_Desc')">
+		<span class="course_title">CS 4220 Computer Networks (C++/Linux)</span>
+		<div class="course_desc" id="CS_4220_Desc" style="display: none;">
+			<p>"Course focuses on the basic network and protocol concepts and principles with practical hands-on exercises on network management, network programming, and network planning through the use of industry simulators. Topics include: Internet protocols and routing, local area networks, basic TCP/IP programming, congestion control, packet switching and routing, quality-of-service, and network management" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4950" onclick="showHide('CS_4950_Desc')">
+		<span class="course_title">CS 4950 Homeland Security & Cyber Security</span>
+		<div class="course_desc" id="CS_4950_Desc" style="display: none;">
+			<p>"This course examines how homeland security safeguards the United States from domestic catastrophic destruction and investigates cyber security as a priority homeland security concern since a coordinated cyber attack against critical infrastructure could produce the worst catastrophe in the nation's history" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_3910" onclick="showHide('CS_3910_Desc')">
+		<span class="course_title">CS 3910 Systems Administration & Security</span>
+		<div class="course_desc" id="CS_3910_Desc" style="display: none;">
+			<p>"Covers the installation and configuration of mainstream operating systems, important network services, disaster recovery procedures, and techniques for ensuring the security of the system" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4420" onclick="showHide('CS_4420_Desc')">
+		<span class="course_title">CS 4420 Database Systems</span>
+		<div class="course_desc" id="CS_4420_Desc" style="display: none;">
+			<p>"Course introduces general database concepts as well as database system technology. The course covers ER and R data models, R-algebra, SQL, data storage and indexing, query optimization, database design and security" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4500" onclick="showHide('CS_4500_Desc')">
+		<span class="course_title">CS 4500 Operating Systems</span>
+		<div class="course_desc" id="CS_4500_Desc" style="display: none;">
+			<p>"Introduces concepts, terminology, and algorithms of operating systems. Describes semaphores, processes, virtual mappings, interrupts, resource allocation and management, protection, synchronization, scheduling, queuing and communication as applied to operating system design and implementation" (UCCS).</p>
+		</div>
+	</li>
+</ul>
+
+<script type="text/javascript">
+	//Toggles between showing and hiding the element ID passed to the function
+	function showHide(elementId) {
+		element = document.getElementById(elementId);
+		if (element.style.display == "block")
+			element.style.display = "none";
+		else
+			element.style.display = "block";
+	}
+
+	//Show or hide all course descriptions
+	//Takes 1 boolean parameter
+	function showAllDescriptions(show) {
+		var descriptionElements = document.getElementsByClassName("course_desc");
+		if(show){
+			for(var i = 0; i < descriptionElements.length; i++){
+				descriptionElements[i].style.display = "block";
+			}
+		}else{
+			for(var i = 0; i < descriptionElements.length; i++){
+				descriptionElements[i].style.display = "none";
+			}
+		}
+
+	}
+</script>
+</div>
+</body>
+</html>
