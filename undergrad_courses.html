@@ -3,6 +3,7 @@
 
 <head>
 <title>Undergrad</title>
+<link rel="stylesheet" href="css/style.css">
 
 <style type="text/css">
 	.content {
@@ -11,9 +12,6 @@
 	}
 	.course_desc {
 		background-color: #e6f7ff;
-	}
-	li {
-		background-color: #d1e0e0;
 	}
 	body {
 		background-color: #fff2cc;
@@ -31,21 +29,25 @@
 
 <body>
 <div class="content">
-<h1>Josh's Ungraduate Years</h1>
+<center>
+<br><h1 style="display:inline;"><a href="index.html">Joshua Doucet</a></h1><br>
+<h3 style="display:inline;">Software Developer</h3><br>
+</center>
+<h2>Ungraduate Years</h2>
 
 <h3>Institutions and Degrees</h3>
 <table>
 	<tr>
 		<td>
-			<img src="images/school_logos/uccs.jpg" width="300">
+			<img src="images/school_logos/uccs.jpg" width="200">
 		</td>
 		<td>
-			<p><strong>B.S. Computer Science<br>GPA 3.91, May 2021</strong></p>
+			<p><strong>B.S. Computer Science<br>GPA 3.93, May 2021</strong></p>
 		</td>
 	</tr>
 	<tr>
 		<td style="padding: 5px;">
-			<img src="images/school_logos/ppcc.jpg" width="300">
+			<img src="images/school_logos/ppcc.jpg" width="200">
 		</td>
 		<td>
 			<p><strong>A.S. Mathematics<br>GPA 3.72, Aug 2019</strong></p>	
@@ -263,6 +265,18 @@
 			<p>"Design methodologies; divide-and-conquer, exhaustive search, dynamic programming. Time and space complexity measures, analysis of algorithms. Survey of important algorithms for searching, sorting, graph manipulation. Tractability: class P and NP, NP complete problems" (UCCS).</p>
 		</div>
 	</li>
+	<li id="CS_4420" onclick="showHide('CS_4420_Desc')">
+		<span class="course_title">CS 4420 Database Systems</span>
+		<div class="course_desc" id="CS_4420_Desc" style="display: none;">
+			<p>"Course introduces general database concepts as well as database system technology. The course covers ER and R data models, R-algebra, SQL, data storage and indexing, query optimization, database design and security" (UCCS).</p>
+		</div>
+	</li>
+	<li id="CS_4500" onclick="showHide('CS_4500_Desc')">
+		<span class="course_title">CS 4500 Operating Systems</span>
+		<div class="course_desc" id="CS_4500_Desc" style="display: none;">
+			<p>"Introduces concepts, terminology, and algorithms of operating systems. Describes semaphores, processes, virtual mappings, interrupts, resource allocation and management, protection, synchronization, scheduling, queuing and communication as applied to operating system design and implementation" (UCCS).</p>
+		</div>
+	</li>
 </ul>
 
 <h5>Software Engineering</h5>
@@ -327,18 +341,6 @@
 		<span class="course_title">CS 3910 Systems Administration & Security</span>
 		<div class="course_desc" id="CS_3910_Desc" style="display: none;">
 			<p>"Covers the installation and configuration of mainstream operating systems, important network services, disaster recovery procedures, and techniques for ensuring the security of the system" (UCCS).</p>
-		</div>
-	</li>
-	<li id="CS_4420" onclick="showHide('CS_4420_Desc')">
-		<span class="course_title">CS 4420 Database Systems</span>
-		<div class="course_desc" id="CS_4420_Desc" style="display: none;">
-			<p>"Course introduces general database concepts as well as database system technology. The course covers ER and R data models, R-algebra, SQL, data storage and indexing, query optimization, database design and security" (UCCS).</p>
-		</div>
-	</li>
-	<li id="CS_4500" onclick="showHide('CS_4500_Desc')">
-		<span class="course_title">CS 4500 Operating Systems</span>
-		<div class="course_desc" id="CS_4500_Desc" style="display: none;">
-			<p>"Introduces concepts, terminology, and algorithms of operating systems. Describes semaphores, processes, virtual mappings, interrupts, resource allocation and management, protection, synchronization, scheduling, queuing and communication as applied to operating system design and implementation" (UCCS).</p>
 		</div>
 	</li>
 </ul>

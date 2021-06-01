@@ -1,0 +1,234 @@
+
+Line # 1:
+{ PL20 Language }
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 2:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 3:
+UNIT TRIANGLE_AREA;
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                  UNIT           15         UNIT
+                         TRIANGLE_AREA           50         IDNT            2
+                                     ;           36         SCOL
+
+Line # 4:
+(* This program prompts the user for values to get area of a triangle*)
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 5:
+VAR BASE, HEIGHT, AREA : REAL;
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                   VAR           13         VARR
+                                  BASE           50         IDNT            3
+                                     ,           44         COMA
+                                HEIGHT           50         IDNT            4
+                                     ,           44         COMA
+                                  AREA           50         IDNT            5
+                                     :           47         COLN
+                                  REAL           23         REAL
+                                     ;           36         SCOL
+
+Line # 6:
+VAR PROMPT1, PROMPT2, PROMPT3, PROMPT4 : STRING;
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                   VAR           13         VARR
+                               PROMPT1           50         IDNT            6
+                                     ,           44         COMA
+                               PROMPT2           50         IDNT            7
+                                     ,           44         COMA
+                               PROMPT3           50         IDNT            8
+                                     ,           44         COMA
+                               PROMPT4           50         IDNT            9
+                                     :           47         COLN
+                                STRING           24         STRI
+                                     ;           36         SCOL
+
+Line # 7:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 8:
+BEGIN
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                 BEGIN           11         BEGI
+
+Line # 9:
+   PROMPT1 := "FIND THE TRIANGLE AREA";
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               PROMPT1           50         IDNT            6
+                                    :=           37         ASGN
+              "FIND THE TRIANGLE AREA"           53         CSTR           10
+                                     ;           36         SCOL
+
+Line # 10:
+   PROMPT2 := "TRIANGLE BASE: ";
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               PROMPT2           50         IDNT            7
+                                    :=           37         ASGN
+                     "TRIANGLE BASE: "           53         CSTR           11
+                                     ;           36         SCOL
+
+Line # 11:
+   PROMPT3 := "TRIANGLE HEIGHT: ";
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               PROMPT3           50         IDNT            8
+                                    :=           37         ASGN
+                   "TRIANGLE HEIGHT: "           53         CSTR           12
+                                     ;           36         SCOL
+
+Line # 12:
+   PROMPT4 := "TRIANGLE AREA: ";
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               PROMPT4           50         IDNT            9
+                                    :=           37         ASGN
+                     "TRIANGLE AREA: "           53         CSTR           13
+                                     ;           36         SCOL
+
+Line # 13:
+   WRITELN ( PROMPT1 );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               WRITELN            9         WRLN
+                                     (           34         LPAR
+                               PROMPT1           50         IDNT            6
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 14:
+   WRITELN ( PROMPT2 );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               WRITELN            9         WRLN
+                                     (           34         LPAR
+                               PROMPT2           50         IDNT            7
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 15:
+   READLN ( BASE );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                READLN           10         RDLN
+                                     (           34         LPAR
+                                  BASE           50         IDNT            3
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 16:
+   WRITELN ( PROMPT3 );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               WRITELN            9         WRLN
+                                     (           34         LPAR
+                               PROMPT3           50         IDNT            8
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 17:
+   READLN ( HEIGHT );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                READLN           10         RDLN
+                                     (           34         LPAR
+                                HEIGHT           50         IDNT            4
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 18:
+   WRITELN ( PROMPT4 );
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               WRITELN            9         WRLN
+                                     (           34         LPAR
+                               PROMPT4           50         IDNT            9
+                                     )           35         RPAR
+                                     ;           36         SCOL
+
+Line # 19:
+   AREA := BASE * HEIGHT / 2;
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                  AREA           50         IDNT            5
+                                    :=           37         ASGN
+                                  BASE           50         IDNT            3
+                                     *           31         MULT
+                                HEIGHT           50         IDNT            4
+                                     /           30         DIVI
+                                     2           51         CINT           15
+                                     ;           36         SCOL
+
+Line # 20:
+   WRITELN ( AREA )
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                               WRITELN            9         WRLN
+                                     (           34         LPAR
+                                  AREA           50         IDNT            5
+                                     )           35         RPAR
+
+Line # 21:
+END.
+                                Lexeme   Token Code  4-Char Code   Symb Index
+                                   END           12         ENDD
+                                     .           48         PERI
+
+Line # 22:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 23:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 24:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+Line # 25:
+                                Lexeme   Token Code  4-Char Code   Symb Index
+
+END OF FILE
+
+-------------------------------------------------------------
+TRACE ON - Triangle Area
+
+INITIAL STATE
+Symbol Table
+Index   Symbol                                             Kind                                        Value      Type
+0       #plus1                                            CONST                                            1   INTEGER
+1       #minu1                                            CONST                                           -1   INTEGER
+2       TRIANGLE_AREA                                     IDENT                                TRIANGLE_AREA    STRING
+3       BASE                                              IDENT                                     0.000000    DOUBLE
+4       HEIGHT                                            IDENT                                     0.000000    DOUBLE
+5       AREA                                              IDENT                                     0.000000    DOUBLE
+6       PROMPT1                                           IDENT                                                 STRING
+7       PROMPT2                                           IDENT                                                 STRING
+8       PROMPT3                                           IDENT                                                 STRING
+9       PROMPT4                                           IDENT                                                 STRING
+10      "FIND THE TRIANGLE AREA"                          CONST                       FIND THE TRIANGLE AREA    STRING
+11      "TRIANGLE BASE: "                                 CONST                              TRIANGLE BASE:     STRING
+12      "TRIANGLE HEIGHT: "                               CONST                            TRIANGLE HEIGHT:     STRING
+13      "TRIANGLE AREA: "                                 CONST                              TRIANGLE AREA:     STRING
+14      #temp1                                            IDENT                                     0.000000    DOUBLE
+15      2                                                 CONST                                            2   INTEGER
+16      #temp2                                            IDENT                                     0.000000    DOUBLE
+
+
+Quad Table
+OPNAME  OPCODE  OP1     OP2     OP3
+MOV     5       10      0       6
+MOV     5       11      0       7
+MOV     5       12      0       8
+MOV     5       13      0       9
+PRINT   16      6       0       0
+PRINT   16      7       0       0
+READ    17      3       0       0
+PRINT   16      8       0       0
+READ    17      4       0       0
+PRINT   16      9       0       0
+MUL     2       3       4       14
+DIV     1       14      15      16
+MOV     5       16      0       5
+PRINT   16      5       0       0
+
+EXECUTION TRACE
+PC = 0000: MOV 10, 0, 6
+PC = 0001: MOV 11, 0, 7
+PC = 0002: MOV 12, 0, 8
+PC = 0003: MOV 13, 0, 9
+PC = 0004: PRINT 6, 0, 0
+  FIND THE TRIANGLE AREA
+PC = 0005: PRINT 7, 0, 0
+  TRIANGLE BASE:
+PC = 0006: READ 3, 0, 0
+  $

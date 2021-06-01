@@ -3,37 +3,412 @@
 
 <head>
 <title>Coding Projects</title>
+<link rel="stylesheet" href="css/style.css">
 
 <style type="text/css">
 	.content {
 		margin: auto;
 		width: 75%;
 	}
-	li {
-		background-color: #d1e0e0;
-	}
 	body {
 		background-color: #fff2cc;
 	}
 	td {
 		padding: 20px;
+		text-align: center;
 	}
 </style>
+
+<script type="text/javascript">
+	function showHide(moreButId, lessButId, elementId) {
+		moreButton = document.getElementById(moreButId);
+		lessButton = document.getElementById(lessButId);
+		element = document.getElementById(elementId);
+		if (element.style.display == "block"){
+			element.style.display = "none";
+			moreButton.style.display = "block";
+			lessButton.style.display = "none";
+		}else{
+			element.style.display = "block";
+			moreButton.style.display = "none";
+			lessButton.style.display = "block";
+		}
+	}
+</script>
+
 </head>
 
 <body>
 <div class="content">
+<center>
+<br><h1 style="display:inline;"><a href="index.html">Joshua Doucet</a></h1><br>
+<h3 style="display:inline;">Software Developer</h3><br>
+</center>
+<h2>Code Portfolio</h2>
 
 <h3>Jimmy's Lefties</h3>
+<p>A web application for finding unpaired and mismatched shoes.
+Jimmy's Lefties scrapes shoe listings from multiple sites
+and centralizes them in one location. Inpired by amputees
+wanting to easily find a single shoe</p>
+<ul>
+<li>Built using <strong>Python</strong> and the <strong>Django framework.</strong> </li>
+<li>Uses the <strong>BeautifulSoup</strong> module for <strong>web scraping</strong> to acquire shoe listings on other sites. </li>
+<li>Uses the <strong>plotly</strong> module for bar chart <strong>data visualization</strong></li>
+<li>Uses Django's built-in functionality for <strong>user authentication</strong></li>
+<li><strong>User search logging</strong> using a Django model</li>
+</ul>
+<center>
+<table>
+	<tr>
+	<td><span>Home page</span><br>
+		<img width="300" src="images/code/lefties1.jpg"></td>
+	<td><span>Search for shoes with phrase "New Balance"</span><br>
+		<img width="300" src="images/code/lefties4.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_lefties_more onclick="showHide('but_lefties_more', 'but_lefties_less', 'lefties_more')">More on Jimmys Lefties</button>
+<button id=but_lefties_less onclick="showHide('but_lefties_more', 'but_lefties_less', 'lefties_more')" style="display: none;">Less on Jimmys Lefties</button>
+
+<div id="lefties_more" style="display: none;">
+
+<table>
+	<td><span>Search for all shoes</span><br>
+		<img width="300" src="images/code/lefties5.jpg"></td>
+	<td><span>Administrator page that shows <br>all user shoes searches</span><br>
+		<img width="180" src="images/code/lefties3.jpg"></td>
+</table>
+
+<table>
+	<tr>
+	<td><span>Login page</span><br>
+		<img width="300" src="images/code/lefties2.jpg"></td>
+	<td><span>Register page</span><br>
+		<img width="300" src="images/code/lefties6.jpg"></td>
+	</tr>
+</table>
+</div>
+
+</center>
+
+<h3>Musiccharts MySQL Database</h3>
+<p>The music charts database project aimed to take a .CSV file of music chart data and convert it into a third normal form relational database using MySQL. The input data in the CSV file contained rows which identify a specific music track that ranked on a Billboard 100 chart for a given year in the range years 1964-1975. The columns represented details about a track such as title, artist, writers, year, record label, date the track entered the Top 100 charts, and the ranking(s) the track had on the top 100 charts. The problem with the input data was that it was not in third normal form which is desirable in a relational database.</p>
+
+<ul>
+	<li>Built using <strong>MySQL Server 8</strong></li>
+	<li>An <strong>entity relationship diagram</strong> was built to organize the data</li>
+	<li>The project focused on <strong>normalizing</strong> the input data so that it is better fit for a <strong>relational database</strong></li>
+</ul>
+
+<center>
+<table>
+	<tr>
+	<td><span>ERD for the musiccharts DB</span><br>
+		<img width="500" src="images/code/musiccharts1.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_musiccharts_more onclick="showHide('but_musiccharts_more', 'but_musiccharts_less', 'musiccharts_more')">More on Musiccharts DB</button>
+<button id=but_musiccharts_less onclick="showHide('but_musiccharts_more', 'but_musiccharts_less', 'musiccharts_more')" style="display: none;">Less on Musiccharts DB</button>
+
+<div id="musiccharts_more" style="display: none;">
+<table>
+	<tr>
+	<td><span>Table descriptions</span><br>
+		<img width="300" src="images/code/musiccharts2.jpg"></td>
+	<td>Table descriptions (cont.)<br>
+		<img width="300" src="images/code/musiccharts3.jpg"></td>
+	</tr>
+</table>
+<table>
+	<tr>
+	<td><span>Using dynamic SQL to insert chart ranking data<br> from 76 repeating columns (week1-week76) into the normalized DB</span><br>
+		<img width="400" src="images/code/musiccharts4.jpg"></td>
+	<td><span>A query for finding song titles that appeared <br>in the 1969 top 100 charts that were performed by<br> at least 2 different artists. <br>Show title, artist, and highest track rank for that year.</span><br>
+		<img width="380" src="images/code/musiccharts5.jpg"></td>
+	</tr>
+</table>
+</div>
+</center>
+
+<h3>Pseudo PL20 Language Compiler</h3>
+<p>An application that compiles "PL20" source code into "quads" which are executed using a pseudo interpreter built using C++ code. The application takes a "PL20" source code file as input. Then, the source code is tokenized using lexical analysis that is based on a deterministic finite automata (DFA). After tokenization, the tokens are parsed using syntax analysis based on context-free grammars (CFGs) that ensure proper code syntax. Once the code is verified to be syntactically correct, "quad" codes are generated based on the sequence of tokens. The quads resemble assembly code instructions with three arguments. Lastly, the quads are fed into the pseudo interpreter which reaads the quads and executes the corresponding C++ operations. </p> 
+
+<ul>
+	<li>Built using <strong>C++</strong> and <strong>Visual Studio 2019</strong></li>
+	<li>Focuses on the fundamentals of <strong>compiler design</strong></li>
+	<li>Utilizes <strong>deterministic finite automaton (DFA)</strong> and <strong>context-free-grammars (CFG)</strong> structures to "compile" PL20 source code into runnable C++ code.</li>
+</ul>
+
+<center>
+<table>
+	<tr>
+	<td><span><br>A PL20 program for input</span><br>
+		<img width="400" src="images/code/compiler1.jpg"></td>
+	<td><span><br>An ouput of the PL20 program</span><br>
+		<img width="300" src="images/code/compiler8.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_compiler_more onclick="showHide('but_compiler_more', 'but_compiler_less', 'compiler_more')">More on Pseudo PL20 Compiler</button>
+<button id=but_compiler_less onclick="showHide('but_compiler_more', 'but_compiler_less', 'compiler_more')" style="display: none;">Less on Pseudo PL20 Compiler</button>
+
+<div id="compiler_more" style="display: none;">
+	<span>Another example program written in PL20 </span><br>
+	<img width="200" src="images/code/compiler2.jpg"><br>
+	<span>Tokenization of the above triangle area PL20 source program</span><br>
+	<img width="400" src="images/code/compiler3.jpg"><br>
+	<span>Initial SymbolTable state, variables and constants found in the triangle area source</span><br>
+	<img width="500" src="images/code/compiler4.jpg"><br>
+	<span>Quad codes generated for the triangle area source. OP1, OP2, and OP3 represents indicies in the SymbolTable</span><br>
+	<img width="300" src="images/code/compiler5.jpg"><br>
+	<span>The execution trace of the above quad executions. Red arrows indicate user input values. Blue arrow represents the program output.</span><br>
+	<img width="250" src="images/code/compiler6.jpg"><br>
+	<span>The final values in the SymbolTable after the quads have finished executing.</span><br>
+	<img width="500" src="images/code/compiler7.jpg"><br>
+</div>
+</center>
+
 <h3>Pet Finder App</h3>
+<p>A web application for getting pets into new homes. Individuals and organizations are able to list pets that are available for adoption, and other individuals who are looking to adopt can search the web application for pets based on several kinds of pet search criteria. Furthermore, individual are able to take a "pet quiz" which helps them determine what kind of pet may be an ideal fit for them</p>
+<ul>
+<li>Built using the <strong>Ruby on Rails</strong> framework within a <strong>Docker</strong> container running a Cloud9 IDE image</li>
+<li>Built using <strong>Agile, TDD, and BDD</strong> methodologies in a team of 5 developers while using <strong>Git and GitHub</strong> for version control</li>
+<li>Uses rails models to store pet and user information in a <strong>SQLite3 database</strong></li>
+<li>Uses the <strong>Google Maps API</strong> to display static maps of a listed pet's location</li>
+</ul>
+<center>
+<table>
+<tr>
+	<td><span>Home page</span><br>
+		<img width="600" src="images/code/petfinder1.jpg"></td>
+</tr>
+</table>
+
+<button id=but_petfinder_more onclick="showHide('but_petfinder_more', 'but_petfinder_less', 'petfinder_more')">More on Pet Finder App</button>
+<button id=but_petfinder_less onclick="showHide('but_petfinder_more', 'but_petfinder_less', 'petfinder_more')" style="display: none;">Less on Pet Finder App</button>
+
+<div id="petfinder_more" style="display: none;">
+<table>
+<tr>
+	<td><span>Taking a pet quiz</span><br>
+		<img width="300" src="images/code/petfinder2.jpg"></td>
+	<td><span>Pet quiz results</span><br>
+		<img width="300" src="images/code/petfinder3.jpg"></td>
+	<td><span>Adding a pet to pet finder</span><br>
+		<img width="350" src="images/code/petfinder5.jpg"></td>
+</tr>
+<tr>
+	<td><span>Pet search criteria page</span><br>
+		<img width="300" src="images/code/petfinder6.jpg"></td>
+	<td><span>Pet search results page</span><br>
+		<img width="300" src="images/code/petfinder7.jpg"></td>
+	<td><span>Pet details and contact page</span><br>
+		<img width="250" src="images/code/petfinder8.jpg"></td>
+</tr>
+</table>
+</div>
+</center>
+
 <h3>DungeonBrawl</h3>
+<p>A Windows Forms turn-based fighting game where HEROES are put up against ENEMIES. You play as the heroes trying to defeat never-ending waves of enemies. Your objective is to defeat as many waves of enemies as possible before your three fighters have been downed and become unable to battle. Each time you defeat all three enemies, you will proceed to the next level. Upon entering a new level you will be presented with a new wave of enemies that have full health HP and full special points SP.</p>
+
+<ul>
+	<li>Built using <strong>C#</strong> and <strong>Windows Forms</strong> within <strong>Visual Studio</strong></li>
+	<li>The application is <strong>event driven</strong> and updated the UI when the player performs game actions such as attacking and defending</li>
+	<li>Each character type utilizes <strong>class inheritance</strong> to ensure all character types have the same base fields and actions. Each character class type is given different stats such as health points, special attack points, strength, and intellect.</li>
+</ul>
+
+<center>
+
+<table>
+	<tr>
+		<td><span>A game in progress</span><br>
+			<img width="300" src="images/code/brawl1.jpg"></td>
+		<td><span>How to play the game</span><br>
+			<img width="300" src="images/code/brawl2.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_brawl_more onclick="showHide('but_brawl_more', 'but_brawl_less', 'brawl_more')">More on DungeonBrawl</button>
+<button id=but_brawl_less onclick="showHide('but_brawl_more', 'but_brawl_less', 'brawl_more')" style="display: none;">Less on DungeonBrawl</button>
+
+<div id="brawl_more" style="display: none;">
+<table>
+	<tr>
+		<td><span>Another game in progress</span><br>
+			<img width="300" src="images/code/brawl3.jpg"></td>
+		<td><span>Fields for the base Character class</span><br>
+			<img width="300" src="images/code/brawl4.jpg"></td>
+	</tr>
+</table>
+</div>
+</center>
+
 <h3>Minesweeper Clone</h3>
-<h3>Battlesink</h3>
+<p>A Window Forms game that mimics the classic Minesweeper game. Find and mark all 10 mines to win the game. </p>
+
+<ul>
+	<li>Built using <strong>C#</strong> and <strong>Windows Forms</strong> within <strong>Visual Studio</strong></li>
+	<li>Tracks lifetime game stats such as win loss ratio and average game time</li>
+</ul>
+
+<center>
+<table>
+		<td><span>An in progress game</span><br>
+			<img width="280" src="images/code/mine1.jpg"></td>
+		<td><span>Winning a game</span><br>
+			<img width="280" src="images/code/mine2.jpg"></td>
+</table>
+
+<button id=but_mine_more onclick="showHide('but_mine_more', 'but_mine_less', 'mine_more')">More on Minesweeper</button>
+<button id=but_mine_less onclick="showHide('but_mine_more', 'but_mine_less', 'mine_more')" style="display: none;">Less on Minesweeper</button>
+
+<div id="mine_more" style="display: none;">
+<table>
+		<td><span>Losing a game</span><br>
+			<img width="280" src="images/code/mine3.jpg"></td>
+		<td><span>How to play</span><br>
+			<img width="350" src="images/code/mine6.jpg"></td>
+</table>
+<table>
+		<td><span>Showing lifetime game stats</span><br>
+			<img width="200" src="images/code/mine5.jpg"></td>
+		<td><span>Game menu</span><br>
+			<img width="250" src="images/code/mine4.jpg"></td>
+</table>
+</div>
+</center>
+
 <h3>Movie Journal</h3>
+<p>An Android app that utilizes TMDb to help you find and keep track of your favorite films. Search and view popular movies, read reviews, watch trailers, and make a list of your favorites!</p>
+
+<ul>
+	<li>Built using <strong>Java</strong> and <strong>Android Studio</strong></li>
+	<li>Fetches nmovie data from <strong>The Movie Database API</strong> in an <strong>asynchronous</strong> manner</li>
+	<li>Stores user favorite movies in a <strong>SQLite3 database</strong></li>
+	<li><strong>Optimized</strong> for devices of different screen sizes</li>
+</ul>
+
+<center>
+<table>
+	<tr>
+		<td><span>Searching for movies with "star" in the title</span><br>
+			<img width="150" src="images/code/movie1.jpg"></td>
+		<td><span>Showing user favorited movies</span><br>
+			<img width="150" src="images/code/movie2.jpg"></td>
+		<td><span>Showing the most popular TMDB movies</span><br>
+			<img width="150" src="images/code/movie3.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_movie_more onclick="showHide('but_movie_more', 'but_movie_less', 'movie_more')">More on Movie Journal</button>
+<button id=but_movie_less onclick="showHide('but_movie_more', 'but_movie_less', 'movie_more')" style="display: none;">Less on Movie Journal</button>
+
+<div id="movie_more" style="display: none;">
+<table>
+	<tr>
+		<td><span>Showing the main app menu</span><br>
+			<img width="150" src="images/code/movie4.jpg"></td>
+		<td><span>Showing a movie details page</span><br>
+			<img width="150" src="images/code/movie5.jpg"></td>
+		<td><span>Trailers and reviews on movie details page</span><br>
+			<img width="150" src="images/code/movie6.jpg"></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><span>Showing most popular on a tablet</span><br>
+			<img width="170" src="images/code/movie7.jpg"></td>
+		<td><span>Showing movie details on a tablet/span><br></span>
+			<img width="170" src="images/code/movie8.jpg"></td>
+	</tr>
+</table>
+<table>
+	<tr>
+	<tr>
+		<td><span>Searching for "star" on a tablet in landscape orientation</span><br>
+			<img width="400" src="images/code/movie9.jpg"></td>
+	</tr>
+	</tr>
+</table>
+<a href="https://play.google.com/store/apps/details?id=com.joshdoucet.moviejournal&hl=en_US&gl=US">Get Movie Journal on Google Play</a>
+</div>
+</center>
+
 <h3>Snap and Store</h3>
-<h3>PongPong</h3>
+<p>An Android app that allows users to create an inventory of objects. The database can be used to inventory personal belongings, items in storage, or a list of items that will be for sale. The name of an item, how many you have, the name of manufacturer, as well as the value/cost of the item, and an image of the object is all useful information that Snap and Store keeps track of for users.</p>
+<ul>
+	<li>Built using <strong>Java</strong> and <strong>Android Studio</strong></li>
+	<li>Stores user items in a local <strong>SQLite3 database</strong></li>
+	<li>Allows users to store photos in the local DB</li>
+	<li>Calculates the total value of all items in inventory</li>
+</ul>
+
+<center>
+<table>
+		<td><span>Show all items in storage</span><br>
+			<img width="150" src="images/code/snap1.jpg"></td>
+		<td><span>Adding a new item (1 of 2)</span><br>
+			<img width="150" src="images/code/snap4.jpg"></td>
+		<td><span>Adding a new item (2 of 2)</span><br>
+			<img width="150" src="images/code/snap5.jpg"></td>
+</table>
+
+<button id=but_snap_more onclick="showHide('but_snap_more', 'but_snap_less', 'snap_more')">More on Snap and Store</button>
+<button id=but_snap_less onclick="showHide('but_snap_more', 'but_snap_less', 'snap_more')" style="display: none;">Less on Snap and Store</button>
+
+<div id="snap_more" style="display: none;">
+<table>
+		<td><span>Deleting an item</span><br>
+			<img width="150" src="images/code/snap2.jpg"></td>
+		<td><span>Clean slate, deleting all items</span><br>
+			<img width="150" src="images/code/snap3.jpg"></td>
+</table>
+
+<a href="https://play.google.com/store/apps/details?id=com.joshdoucet.snapandsave&hl=en_US&gl=US">Get Snap and Store on Google Play</a>
+</div>
+</center>
+
 <h3>Blackjack</h3>
-<h3>Phone # Word Generator</h3>
+<p>A clone of the Blackjack card game where players compete against the dealer to see if they can get as close to the card value of 21 without going over and busting. A gamified betting system is imcluded in the game.</p>
+
+<ul>
+	<li>Built using <strong>Python</strong> within the <strong>CodeSkulptor</strong> browser IDE</li>
+	<li>Utilizes the <strong>simplegui</strong> module</li>
+	<li>Displays card images by drawing a subset of pixels from a larger image that contains all the card images</li>
+</ul>
+
+<center>
+<table>
+	<tr>
+		<td><span>Betting $325 on a game</span><br>
+			<img width="400" src="images/code/blackjack1.jpg"></td>
+		<td><span>Player losing the bet</span><br>
+			<img width="400" src="images/code/blackjack2.jpg"></td>
+	</tr>
+</table>
+
+<button id=but_blackjack_more onclick="showHide('but_blackjack_more', 'but_blackjack_less', 'blackjack_more')">More on Blackjack</button>
+<button id=but_blackjack_less onclick="showHide('but_blackjack_more', 'but_blackjack_less', 'blackjack_more')" style="display: none;">Less on Blackjack</button>
+
+<div id="blackjack_more" style="display: none;">
+
+<table>
+	<tr>
+		<td><span>Betting $177 on a game</span><br>
+			<img width="400" src="images/code/blackjack3.jpg"></td>
+		<td><span>Player winning the bet</span><br>
+			<img width="400" src="images/code/blackjack4.jpg"></td>
+	</tr>
+</table>
+
+<a href="https://py2.codeskulptor.org/#user48_viyYXXEATB_0.py">Play Blackjack here</a>
+</div>
+</center>
+
+<a href="https://github.com/JoshuaDoucet">Josh's GitHub</a><br>
 
 </div>
 </body>

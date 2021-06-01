@@ -1,3 +1,12 @@
 .circular-square {
   border-radius: 50%;
 }
+body {
+  background-color:#CEF2CC;
+  background-image: linear-gradient(#CCE1F2, #CEF2CC);
+  background-repeat: no-repeat;
+}
+
+li {
+	background-color: #D7F9CD;
+}
